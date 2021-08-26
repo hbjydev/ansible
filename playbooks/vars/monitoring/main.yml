@@ -1,0 +1,11 @@
+---
+monitoring_server_firewall_rules:
+  - port: 80/tcp
+    permanent: true
+    state: enabled
+  - port: 443/tcp
+    permanent: true
+    state: enabled
+  - port: 9090/tcp
+    permanent: true
+    state: enabled
