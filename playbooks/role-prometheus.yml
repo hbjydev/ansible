@@ -1,6 +1,7 @@
 ---
 - name: 'Descriptive name for the playbook'
   hosts: '{{ host }}'
+  become: true
 
   vars_files:
     - vars/monitoring/main.yml
