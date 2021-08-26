@@ -10,6 +10,16 @@
     installation_prefix: ../
 
   pre_tasks:
+   - name: Install required pip modules
+     pip:
+       name:
+         - jmespath
+         - netaddr
+         - python-consul
+         - pyvmomi
+         - python-ldap
+         - twine
+
     - name: Remove existing public roles
       file:
         path: "{{ installation_prefix }}{{ roles_installation_dir }}"
