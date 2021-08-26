@@ -29,6 +29,6 @@ prometheus_targets:
 
   windows:
     - targets:
-        - HY-LAB-DC01.hy-lab.local
+        - HY-LAB-DC01.hy-lab.local:9182
       labels:
         env: windows
