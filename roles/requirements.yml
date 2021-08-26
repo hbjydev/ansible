@@ -2,6 +2,8 @@
 roles:
   - name: cloudalchemy.node_exporter
   - name: cloudalchemy.prometheus
+    src: https://github.com/cloudalchemy/ansible-prometheus
+    version: master
   - name: cloudalchemy.alertmanager
   - name: cloudalchemy.grafana
 
