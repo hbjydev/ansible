@@ -1,0 +1,11 @@
+---
+roles:
+  - name: cloudalchemy.node_exporter
+  - name: cloudalchemy.prometheus
+  - name: cloudalchemy.alertmanager
+  - name: cloudalchemy.grafana
+
+collections:
+  - name: community.general
+  - name: ansible.posix
+  - name: nginxinc.nginx_core

@@ -1,0 +1,15 @@
+tmp/*
+!tmp/README.md
+
+roles/public/*
+!roles/public/README.md
+
+collections/*
+!collections/README.md
+
+playbooks/vars/vaults/*
+!playbooks/vars/vaults/README.md
+
+playbooks/templates/hidden/*
+!playbooks/templates/hidden/README.md
+
