@@ -1,11 +1,11 @@
 ---
-- name: 'Deploy & configure Grafana'
+- name: 'Deploy & configure node_exporter'
   hosts: '{{ host }}'
   become: true
 
   vars_files:
     - vars/monitoring/main.yml
-    - vars/monitoring/grafana.yml
+    - vars/monitoring/node_exporter.yml
 
   handlers:
     - include: handlers/main.yml
@@ -24,16 +24,10 @@
         fail_msg: "/etc/no-ansible exists - skipping run on this node"
 
   roles:
-    - role: cloudalchemy.grafana
+    - role: cloudalchemy.node_exporter
       state: present
 
   post_tasks:
-    - name: Open firewalld ports
-      ansible.posix.firewalld:
-        port: "3000/tcp"
-        permanent: true
-        state: enabled
-
     - name: Touching run file that ansible has ran here
       file:
         path: /var/log/ansible.run
